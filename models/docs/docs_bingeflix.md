@@ -112,6 +112,10 @@ The price of the subscription.
 The recurring payment period for the subscription.
 {% enddocs %}
 
+{% docs billing_period %}
+The cadence of the billing period for the subscription - monthly, yearly. 
+{% enddocs %}
+
 {% docs starts_at%}
 The date the subscription starts
 {% enddocs %}
