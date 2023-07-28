@@ -9,10 +9,6 @@ The calendar date of the campaign reporting period.
 The unique identifier for the campaign.
 {% enddocs %}
 
-{% docs surrogate_key %}
-The surrogate key.
-{% enddocs %}
-
 {% docs spend %}
 The amount spent on the campaign.
 {% enddocs %}
