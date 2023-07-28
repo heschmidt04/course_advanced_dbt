@@ -1,0 +1,29 @@
+models:
+  - name: fct_events
+    description: This fact table contains information about the behavioral events from staging events table.
+    columns:
+      - name: session_id
+        description: '{{ doc("session_id") }}'
+        tests:
+          - not_null
+
+      - name: created_at
+        description: '{{ doc("event_created_at") }}'
+        tests:
+          - not_null
+
+      - name: user_id
+        description: '{{ doc("bingeflix_user_id") }}'
+        tests:
+          - not_null
+
+      - name: event_name
+        description: '{{ doc("event_name") }}'
+        tests:
+          - not_null
+
+      - name: event_id
+        description: '{{ doc("event_id") }}'
+        tests:
+          - not_null
+          - unique
