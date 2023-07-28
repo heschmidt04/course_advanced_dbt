@@ -50,6 +50,14 @@ The user's email. PII.
 The user's birthdate. PII.
 {% enddocs %}
 
+{% docs current_age %}
+The user's current_age. PII 
+{% enddocs %}
+
+{% docs age_at_acquisition %}
+The user's at sign up with Bingeflix
+{% enddocs %}
+
 {% docs region %}
 The state or region the user resides in (i.e. the state or province).
 {% enddocs %}
