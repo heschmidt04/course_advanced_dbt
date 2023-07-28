@@ -2,7 +2,9 @@
 This file contains docs blocks for Bingeflix sources
 
 ## Users
+{% docs users %}
 This section contains documentation from the Bingeflix Users table.
+{% enddocs %}
 
 {% docs bingeflix_user_id %}
 The unique identifier of the Bingeflix user.
@@ -16,8 +18,16 @@ When the user's account was created.
 The user's phone number. PII.
 {% enddocs %}
 
+{% docs created_at %}
+When the user's account was created (This is NULL if the account is not deleted.)
+{% enddocs %}
+
 {% docs deleted_at %}
 When the user's account was deleted (This is NULL if the account is not deleted.)
+{% enddocs %}
+
+{% docs name %}
+The name used for user
 {% enddocs %}
 
 {% docs username %}
@@ -28,7 +38,7 @@ The username used for login
 The user's full name. PII.
 {% enddocs %}
 
-{% docs user_sex %}
+{% docs sex %}
 The user's sex at birth. PII.
 {% enddocs %}
 
@@ -49,7 +59,9 @@ The country the user resides in
 {% enddocs %}
 
 ## Events
+{% docs events %}
 This section contains documentation from the Bingeflix Events table.
+{% enddocs %}
 
 {% docs session_id %}
 The unique identifier of the session in the Bingeflix application.
@@ -71,4 +83,35 @@ The name of the event. Possible values:
 
 {% docs event_id %}
 The unique identifer for the event, integer.
+{% enddocs %}
+
+## Subscription plans 
+This section contains information about various subscription plans available on Bingeflix.
+
+{% docs subscription_plan_id %}
+The unique identifier of the subscription plan.
+{% enddocs %}
+
+{% docs plan_name %}
+The name of the subscription plan.
+{% enddocs %}
+
+{% docs pricing %}
+The price of the subscription.
+{% enddocs %}
+
+{% docs payment_period %}
+The recurring payment period for the subscription.
+{% enddocs %}
+
+{% docs starts_at%}
+The date the subscription starts
+{% enddocs %}
+
+{% docs ends_at%}
+The date the subscription ends
+{% enddocs %}
+
+{% docs subscription_id %}
+The subscription id 
 {% enddocs %}
