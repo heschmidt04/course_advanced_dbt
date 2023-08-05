@@ -1,5 +1,9 @@
-## Platform Daily Ads 
+## Platform Daily Ads
 This section contains the daily ad campaigns table.
+
+{% docs daily_ads %}
+The amount of ads per day
+{% enddocs %}
 
 {% docs date %}
 The calendar date of the campaign reporting period.

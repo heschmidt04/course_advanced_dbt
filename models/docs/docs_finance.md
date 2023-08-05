@@ -32,4 +32,3 @@ The number of months the subscription has been retained since it was started (fi
 {% docs date_month %}
 The calendar month.
 {% enddocs %}
-

@@ -1,7 +1,12 @@
 models:
   - name: stg_ads_platform_daily_ads
-    description: The ads platform daily ads table 
+    description: The ads platform daily ads table
     columns:
+      - name: daily_ads
+        description: '{{ doc("daily_ads") }}'
+        tests:
+          - not_null
+
       - name: date
         description: '{{ doc("date") }}'
         tests:

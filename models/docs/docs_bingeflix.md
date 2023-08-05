@@ -51,7 +51,7 @@ The user's birthdate. PII.
 {% enddocs %}
 
 {% docs current_age %}
-The user's current_age. PII 
+The user's current_age. PII
 {% enddocs %}
 
 {% docs age_at_acquisition %}
@@ -64,6 +64,14 @@ The state or region the user resides in (i.e. the state or province).
 
 {% docs country %}
 The country the user resides in
+{% enddocs %}
+
+{% docs first_subscription_starts_at %}
+Earliest start of the subscription
+{% enddocs %}
+
+{% docs count_of_subscriptions %}
+The total count of subscriptions without any duplicates
 {% enddocs %}
 
 ## Events
@@ -93,7 +101,7 @@ The name of the event. Possible values:
 The unique identifer for the event, integer.
 {% enddocs %}
 
-## Subscription plans 
+## Subscription plans
 This section contains information about various subscription plans available on Bingeflix.
 
 {% docs subscription_plan_id %}
@@ -113,7 +121,7 @@ The recurring payment period for the subscription.
 {% enddocs %}
 
 {% docs billing_period %}
-The cadence of the billing period for the subscription - monthly, yearly. 
+The cadence of the billing period for the subscription - monthly, yearly.
 {% enddocs %}
 
 {% docs starts_at%}
@@ -125,5 +133,5 @@ The date the subscription ends
 {% enddocs %}
 
 {% docs subscription_id %}
-The subscription id 
+The subscription id
 {% enddocs %}

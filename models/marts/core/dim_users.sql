@@ -2,7 +2,17 @@ WITH
 
 users AS (
     SELECT
-        *
+        user_id,
+        created_at,
+        phone_number,
+        deleted_at,
+        username,
+        name,
+        sex,
+        email,
+        birthdate,
+        region,
+        country
     FROM
         {{ ref('stg_bingeflix_users') }}
 ),

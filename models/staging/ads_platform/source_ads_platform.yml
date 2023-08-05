@@ -1,7 +1,32 @@
 sources:
   - name: ads_platform
     schema: public
+    description: This source contains raw data from tables from the Ads Platform raw database
     database: raw
     tables:
       - name: daily_ads
         identifier: ads
+        description: '{{ doc("daily_ads") }}'
+        columns:
+          - name: date
+            description: '{{ doc("date") }}'
+
+          - name: campaign_id
+            description: '{{ doc("campaign_id") }}'
+            tests:
+              - not_null
+
+          - name: spend
+            description: '{{ doc("spend") }}'
+            tests:
+              - not_null
+
+          - name: cpm
+            description: '{{ doc("cpm") }}'
+            tests:
+              - not_null
+
+          - name: ctr
+            description: '{{ doc("ctr") }}'
+            tests:
+              - not_null
