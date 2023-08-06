@@ -28,7 +28,6 @@ models:
       select: ['transformer', 'reporter']
 
     staging:
-      +schema: staging
       +tags:
         - "hourly"
 
