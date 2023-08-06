@@ -28,6 +28,7 @@ models:
       select: ['transformer', 'reporter']
 
     staging:
+      +schema: staging
       +tags:
         - "hourly"
 
@@ -39,6 +40,9 @@ models:
       +tags:
         - "daily"
 
+    tests:
+      +store_failures: true
+      +schema: tests
 
 seeds:
   dbt_project_evaluator:
