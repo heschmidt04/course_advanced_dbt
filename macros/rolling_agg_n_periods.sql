@@ -4,6 +4,6 @@
         PARTITION BY {{ partition_by }}
         ORDER BY {{ order_by }}
         ROWS BETWEEN {{ periods - 1 }} PRECEDING AND CURRENT ROW
-    ) AS {{ agg_type }}{{ periods }}_periods_{{ column_name }}
+    ) AS {{ agg_type }}_{{ periods }}_periods_{{ column_name }}
 
 {% endmacro %}
