@@ -33,30 +33,30 @@ Bingeflix uses four main database tables that service their data models:
 
 ### **Task 2: Add docs blocks to populate missing documentation and maintain consistency**
 
-1. Added doc_source.md files in the models/docs/ directory for each source and chose to populate as many yml files as possible. 
-2. Added description: `'{{ doc("column_id_goes_here") }}'` to each .yml file 
-    
+1. Added doc_source.md files in the models/docs/ directory for each source and chose to populate as many yml files as possible.
+2. Added description: `'{{ doc("column_id_goes_here") }}'` to each .yml file
+
     Hint: Be sure that your documentation is consistent for columns of the same name!
-    
-3. Run `dbt docs generate` and `dbt docs serve` to confirm the documentation populated as expected. You can toggle the course_advanced_dbt and leave out the tables for the dbt packages listed in the dbt_project.yml 
+
+3. Run `dbt docs generate` and `dbt docs serve` to confirm the documentation populated as expected. You can toggle the course_advanced_dbt and leave out the tables for the dbt packages listed in the dbt_project.yml
 
 ### **Task 3: Install dbt_project_evaluator package to enforce best practices**
 
-1. After putting in the project into dbt_project.yml run `dbt deps` to install 
+1. After putting in the project into dbt_project.yml run `dbt deps` to install
 2. Run the command `dbt build -s package:dbt_project_evaluator dbt_project_evaluator_exceptions`
-    
+
     Review the warnings identified and decide how your want to resolve them.
-    
-    1. Put the following syntax into dbt_project.yml to see the error and a more human readable table output. 
+
+    1. Put the following syntax into dbt_project.yml to see the error and a more human readable table output.
         1. `on-run-end: "{{ dbt_project_evaluator.print_dbt_project_evaluator_issues() }}”`
         2. Look at the table `fct_root_models`
-        3. Moved the mrr labelled models to fct_mrr.sql and fct_mrr.yml to clear errors. Reference 
-        
+        3. Moved the mrr labelled models to fct_mrr.sql and fct_mrr.yml to clear errors. Reference
+
         [Modeling subscription revenue](https://www.getdbt.com/blog/modeling-subscription-revenue/)
-        
+
 3. Your goal for this task should be to resolve all warnings identified by the package.
-    1. I left the dim_dates alert along because I chose to move the dimension to models/marts/dates 
-    2. I applied the fct prefix to mrr.sql and mrr.yml to clear the errors and follow standard naming conventions 
+    1. I left the dim_dates alert along because I chose to move the dimension to models/marts/dates
+    2. I applied the fct prefix to mrr.sql and mrr.yml to clear the errors and follow standard naming conventions
 4. In the project submission box, provide a short explanation for why you chose to resolve the issues in the way you did to demonstrate your understanding of how to work with this package. Some examples of this might look like:
 
 ## CoRise Adv DBT docs generated DAG Week1 Project

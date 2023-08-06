@@ -27,7 +27,22 @@ models:
     +grants:
       select: ['transformer', 'reporter']
 
+    staging:
+      +tags:
+        - "hourly"
+
+    marts:
+      +tags:
+        - "hourly"
+
+    metrics:
+      +tags:
+        - "daily"
+
+
 seeds:
   dbt_project_evaluator:
     dbt_project_evaluator_exceptions:
       +enabled: false
+  +tags:
+    - "hourly"
